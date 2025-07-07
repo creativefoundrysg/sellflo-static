@@ -1,4 +1,6 @@
 <form
+    method="POST"
+    action="/api"
     class="mt-8 sm:flex sm:w-full sm:max-w-lg bg-black rounded-xl p-2"
     id="lead-form">
     <div class="min-w-0 flex-1">

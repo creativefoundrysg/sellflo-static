@@ -67,73 +67,23 @@
 						<div class="mt-6">
 							<div class="inline-flex items-center divide-x divide-gray-300">
 								<div class="flex shrink-0 pr-5">
-									<svg
-										class="size-5 text-yellow-400"
-										viewBox="0 0 20 20"
-										fill="currentColor"
-										aria-hidden="true"
-										data-slot="icon"
-									>
-										<path
-											fill-rule="evenodd"
-											d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
-											clip-rule="evenodd"
-										/>
-									</svg>
-									<svg
-										class="size-5 text-yellow-400"
-										viewBox="0 0 20 20"
-										fill="currentColor"
-										aria-hidden="true"
-										data-slot="icon"
-									>
-										<path
-											fill-rule="evenodd"
-											d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
-											clip-rule="evenodd"
-										/>
-									</svg>
-									<svg
-										class="size-5 text-yellow-400"
-										viewBox="0 0 20 20"
-										fill="currentColor"
-										aria-hidden="true"
-										data-slot="icon"
-									>
-										<path
-											fill-rule="evenodd"
-											d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
-											clip-rule="evenodd"
-										/>
-									</svg>
-									<svg
-										class="size-5 text-yellow-400"
-										viewBox="0 0 20 20"
-										fill="currentColor"
-										aria-hidden="true"
-										data-slot="icon"
-									>
-										<path
-											fill-rule="evenodd"
-											d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
-											clip-rule="evenodd"
-										/>
-									</svg>
-									<svg
-										class="size-5 text-yellow-400"
-										viewBox="0 0 20 20"
-										fill="currentColor"
-										aria-hidden="true"
-										data-slot="icon"
-									>
-										<path
-											fill-rule="evenodd"
-											d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
-											clip-rule="evenodd"
-										/>
-									</svg>
+									{#each Array.from({ length: 5 }) as _, index}
+										<svg
+											class="size-5 text-yellow-400"
+											viewBox="0 0 20 20"
+											fill="currentColor"
+											aria-hidden="true"
+											data-slot="icon"
+										>
+											<path
+												fill-rule="evenodd"
+												d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+												clip-rule="evenodd"
+											/>
+										</svg>
+									{/each}
 								</div>
-								<div class="min-w-0 flex-1 py-1 pl-5 text-sm text-gray-500 sm:py-3">
+								<div class="min-w-0 flex-1 py-1 pl-5 text-sm text-gray-500 sm:py-3 text-nowrap">
 									<span class="font-medium text-gray-900">Rated 5 stars</span> by our beta users
 								</div>
 							</div>
