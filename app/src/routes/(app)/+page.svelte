@@ -1,6 +1,7 @@
 <script>
 	import Form from './components/form.svelte';
     let { data } = $props();
+	let imageLoaded = $state(false);
 </script>
 
 <div class="bg-white">
@@ -134,9 +135,12 @@
 						class="relative -mr-40 pl-6 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-full lg:max-w-none lg:pl-12"
 					>
 						<img
-							class="w-full rounded-md shadow-lg ring-1 ring-black lg:h-full lg:w-auto lg:max-w-none"
+							id="screenshot"
+							class="{imageLoaded ? 'opacity-100' : 'opacity-10'} w-full fade-in transition-opacity duration-1000 opacity-0 rounded-md shadow-lg lg:h-full lg:w-auto lg:max-w-none"
 							src="/screenshot-min.png"
 							alt=""
+							loading="lazy"
+							onload={() => imageLoaded = true}
 						/>
 					</div>
 				</div>
