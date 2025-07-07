@@ -42,7 +42,7 @@
 									class="bg-yellow-200 px-1 font-semibold text-black">No coding needed!</span
 								> Just say what you want and our AI agents take care of the rest.
 							</p>
-							<!-- <div class="performance flex flex-row gap-x-8 mt-6">
+							 <div class="performance flex flex-row gap-x-8 mt-6">
                     <div class="flex flex-col items-center">
                       <div class="size-16 flex items-center justify-center bg-green-100 rounded-full p-2 border-4 border-green-500">
                         <span class="text-lg text-center text-green-700">100</span>
@@ -63,7 +63,7 @@
                       </div>
                       <span class="text-xs mt-2">SEO</span>
                     </div>
-                </div> -->
+                </div>
 						</div>
 						<Form data={data}/>
 						<div class="mt-6">
