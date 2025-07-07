@@ -136,8 +136,8 @@
 					>
 						<img
 							id="screenshot"
-							class="{imageLoaded ? 'opacity-100' : 'opacity-10'} w-full fade-in transition-opacity duration-1000 opacity-0 rounded-md shadow-lg lg:h-full lg:w-auto lg:max-w-none"
-							src="/screenshot-min.png"
+							class="{imageLoaded ? 'opacity-100' : 'opacity-10'} w-full fade-in transition-opacity duration-1000 opacity-0 rounded-md shadow-xl lg:h-full lg:w-auto lg:max-w-none"
+							src="/screenshot-min.webp"
 							alt=""
 							loading="lazy"
 							onload={() => imageLoaded = true}
