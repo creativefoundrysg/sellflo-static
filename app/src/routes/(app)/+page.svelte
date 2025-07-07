@@ -85,7 +85,7 @@
 									{/each}
 								</div>
 								<div class="min-w-0 flex-1 py-1 pl-5 text-sm text-gray-500 sm:py-3 text-nowrap">
-									<span class="font-medium text-gray-900">Rated 5 stars</span> by our beta users
+									<span class="font-medium text-gray-900">Rated 5 stars</span> by our clients
 								</div>
 							</div>
 						</div>

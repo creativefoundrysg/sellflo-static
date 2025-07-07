@@ -13,5 +13,20 @@
     </div>
 </form>
 <script>
+	import { onMount } from "svelte";
+
     let { data } = $props();
+
+    onMount(() => {
+        const form = document.getElementById('lead-form');
+        form.addEventListener('submit', (e) => {
+            const email = form.email.value.trim();
+            const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+            if (!isValid) {
+                e.preventDefault();
+                alert("Please enter a valid email address.");
+            }
+        });
+    });
 </script>

@@ -19,7 +19,7 @@ export const actions = {
             return fail(403, { message: 'Invalid CSRF token' });
         }
         
-        client.sendEmailWithTemplate({
+        await client.sendEmailWithTemplate({
             "From": "hello@sellflo.ai",
             "To": "hello@rangesh.me",
             "TemplateModel": {
