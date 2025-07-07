@@ -38,32 +38,10 @@
 								>
 							</h1>
 							<p class="mt-6 text-xl text-gray-500">
-								Generate landing pages in SECONDS. <span
+								Generate landing pages in <span class="italic">seconds</span>. <span
 									class="bg-yellow-200 px-1 font-semibold text-black">No coding needed!</span
-								> Just say what you want and our AI agents take care of the rest.
+								> Just say <span class="font-bold italic">hey</span> and our AI agents take care of the rest.
 							</p>
-							 <div class="performance flex flex-row gap-x-8 mt-6">
-                    <div class="flex flex-col items-center">
-                      <div class="size-16 flex items-center justify-center bg-green-100 rounded-full p-2 border-4 border-green-500">
-                        <span class="text-lg text-center text-green-700">100</span>
-                      </div>
-                      <span class="text-xs mt-2">Performance</span>
-                    </div>
-  
-                    <div class="flex flex-col items-center">
-                      <div class="size-16 flex items-center justify-center bg-green-100 rounded-full p-2 border-4 border-green-500">
-                        <span class="text-lg text-center text-green-700">100</span>
-                      </div>
-                      <span class="text-xs mt-2">Best practices</span>
-                    </div>
-  
-                    <div class="flex flex-col items-center">
-                      <div class="size-16 flex items-center justify-center bg-green-100 rounded-full p-2 border-4 border-green-500">
-                        <span class="text-lg text-center text-green-700">100</span>
-                      </div>
-                      <span class="text-xs mt-2">SEO</span>
-                    </div>
-                </div>
 						</div>
 						<Form data={data}/>
 						<div class="mt-6">
@@ -86,8 +64,12 @@
 									{/each}
 								</div>
 								<div class="min-w-0 flex-1 py-1 pl-5 text-sm text-gray-500 sm:py-3 text-nowrap">
-									<span class="font-medium text-gray-900">Rated 5 stars</span> by our clients
+									<span class="font-medium text-gray-900">Rated 5 stars</span> by our clients:
 								</div>
+							</div>
+							<div class="flex flex-row gap-2 mt-6">
+								<img src="/carcustoms-logo.svg" alt="Car Customs" class="h-6 w-auto ml-2 opacity-60" />
+								<img src="/realtypremium-logo.svg" alt="Realty Premium" class="h-6 w-auto ml-2 opacity-40" />
 							</div>
 						</div>
 					</div>

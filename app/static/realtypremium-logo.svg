@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 339 83" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,0,-351.806)">
+        <g id="Page-1" serif:id="Page 1" transform="matrix(0.264697,0,0,0.103448,0,351.806)">
+            <rect x="0" y="0" width="1280" height="800" style="fill:none;"/>
+            <g id="Background-Image" serif:id="Background Image" transform="matrix(3.77791,0,0,9.66672,-1881.85,-3400.81)">
+                <text x="645.667px" y="421.201px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:16px;">P <tspan x="671.779px 681.896px 697.987px 706.659px 723.425px 737.206px 753.972px 758.581px 775.347px 786.433px 803.199px " y="421.201px 421.201px 421.201px 421.201px 421.201px 421.201px 421.201px 421.201px 421.201px 421.201px 421.201px ">R E M I U M</tspan></text>
+            </g>
+            <g id="Logo-Final" serif:id="Logo Final" transform="matrix(3.77791,0,0,9.66672,-1881.85,-3400.81)">
+                <text x="650.179px" y="396.833px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:43px;">R<tspan x="681.077px 708.092px 741.467px 768.104px 799.002px " y="396.833px 396.833px 396.833px 396.833px 396.833px ">EALTY</tspan></text>
+                <g transform="matrix(-0.707107,0.707107,0.707107,0.707107,633.193,400.889)">
+                    <rect x="12.579" y="-58.38" width="11.619" height="63.573"/>
+                </g>
+                <g transform="matrix(-0.707091,0.707123,0.707123,0.707091,570.452,426.879)">
+                    <rect x="-50.164" y="-32.392" width="63.576" height="11.618"/>
+                </g>
+                <g transform="matrix(-0.707091,0.707123,0.707123,0.707091,542.038,426.873)">
+                    <rect x="-50.155" y="-32.393" width="63.574" height="11.617"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
