@@ -1,7 +1,6 @@
 import postmark from "postmark"
 import { fail, redirect } from '@sveltejs/kit';
 
-/** @type {import('./$types').Actions} */
 // @ts-ignore
 export const actions = {
 	form: async ({ cookies, request, url }) => {

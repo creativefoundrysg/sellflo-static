@@ -1,5 +1,6 @@
 <script>
 	import Form from './components/form.svelte';
+    let { data } = $props();
 </script>
 
 <div class="bg-white">
@@ -63,7 +64,7 @@
                     </div>
                 </div> -->
 						</div>
-						<Form />
+						<Form data={data}/>
 						<div class="mt-6">
 							<div class="inline-flex items-center divide-x divide-gray-300">
 								<div class="flex shrink-0 pr-5">
