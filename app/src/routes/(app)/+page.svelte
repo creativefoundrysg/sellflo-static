@@ -134,8 +134,7 @@
 									</svg>
 								</div>
 								<div class="min-w-0 flex-1 py-1 pl-5 text-sm text-gray-500 sm:py-3">
-									<span class="font-medium text-gray-900">Rated 5 stars</span> by our
-									<span class="font-medium text-rose-500">beta users</span>
+									<span class="font-medium text-gray-900">Rated 5 stars</span> by our beta users
 								</div>
 							</div>
 						</div>
