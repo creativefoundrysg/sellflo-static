@@ -64,12 +64,15 @@
 									{/each}
 								</div>
 								<div class="min-w-0 flex-1 py-1 pl-5 text-sm text-gray-500 sm:py-3 text-nowrap">
-									<span class="font-medium text-gray-900">Rated 5 stars</span> by our clients:
+									<span class="font-medium text-gray-900">Rated 5 stars</span> <span class="text-zinc-400">by our clients:</span>
 								</div>
 							</div>
-							<div class="flex flex-row gap-2 mt-6">
-								<img src="/carcustoms-logo.svg" alt="Car Customs" class="h-6 w-auto ml-2 opacity-60" />
-								<img src="/realtypremium-logo.svg" alt="Realty Premium" class="h-6 w-auto ml-2 opacity-40" />
+							<div class="flex flex-row gap-2 mt-4">
+								<img src="/carcustoms-logo.svg" alt="Car Customs" class="h-6 w-auto opacity-70" />
+								<img src="/realtypremium-logo.svg" alt="Realty Premium" class="h-6 w-auto ml-2 opacity-50" />
+							</div>
+							<div class="text-xs text-zinc-400 mt-8">
+								This landing page was designed by our AI agents. <a class="underline" target="_blank" href="https://pagespeed.web.dev/analysis/https-sellflo-ai/t5eedlqflo?form_factor=mobile">Verify our performance claim.</a>
 							</div>
 						</div>
 					</div>
