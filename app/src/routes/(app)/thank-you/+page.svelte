@@ -20,5 +20,19 @@
         setTimeout(() => {
             show = true;
         }, 150);
+
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+                event: 'page_view',
+                page_path: window.location.pathname,
+        });
+        window.dataLayer.push({
+            event: 'generate_lead',
+            form_name: 'Homepage Subscribe Form',
+            page_path: window.location.pathname,
+        });
+        setTimeout(() => { 
+            // window.location = "https://sellflo.ai";
+        }, 5000);
     })
 </script>
