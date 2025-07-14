@@ -30,12 +30,12 @@
 						</div>
 						<div class="mt-6 sm:max-w-xl">
 							<h1 class="flex flex-col space-y-2 tracking-tight sm:text-5xl">
-								<span class="block text-4xl font-bold text-gray-900"
-									>High-Performance Landing Pages.</span
-								>
-								<span class="mt-2 block text-3xl font-light text-gray-600"
-									>Instant. Powered By AI.</span
-								>
+								<span class="block text-4xl font-bold text-gray-900">
+									{@html data.title}
+								</span>
+								<span class="mt-2 block text-3xl font-light text-gray-600">
+									{@html data.description}
+								</span>
 							</h1>
 							<p class="mt-6 text-xl text-gray-500">
 								Generate landing pages in <span class="italic">seconds</span>. <span
