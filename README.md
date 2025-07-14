@@ -6,3 +6,5 @@ pnpm build
 pnpm deploy 
 or wrangler pages deploy
 ```
+FB Pixel:
+EAAeZCi025ZA5UBPMdc3CZBgrzN8NsGUlRPLRhGADjcZCstyYmaO7ZAPf9UydYhl3Io6IxnZAsYyG58fpRFGNwjZBJdrdPpP1Y3rp2koiZBuMQ9su0fs8JUoTu2a0rkxTZCzYOXxdUrZAfuRuRbmGOpufMepyrSZCyI2Ryc95PUOCMdetMW9p9l9OwHVZBvLe8GFAHzASjwZDZD
