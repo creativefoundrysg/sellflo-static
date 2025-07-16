@@ -16,13 +16,13 @@ export async function load({ cookies, url }) {
 	}
 
 	const variants = [
-		{ variant: 1, title: 'Get your next 100 Leads.', description: 'Instant Landing Pages. Powered By AI.' },
-		{ variant: 2, title: 'Get your next 100 Customers.', description: 'Generate a Landing Page before your coffee\'s ready.' },
-		{ variant: 3, title: 'Get +100 Customers with AI.', description: 'Fast, instant HIGH CONVERTING Landing Pages.' },
+		{ variant: 1, title: 'Get your next 100 Leads with AI.', description: 'Instant Landing Pages. Powered By AI.' },
+		{ variant: 2, title: 'Get your next 100 Customers with AI.', description: 'Generate a Landing Page before your coffee\'s ready.' },
+		{ variant: 3, title: 'Get 100 Leads in 30 days.', description: 'Fast, instant HIGH CONVERTING Landing Pages.' },
 		{ variant: 4, title: 'Let AI get your next Lead.', description: 'Just one prompt. Fully built, optimized, and deployed.' },
 		{ variant: 5, title: 'Let AI get your next 100 Leads.', description: 'Prompt to Landing Page in under 20 seconds.' },
 		{ variant: 6, title: 'Let AI get your next 100 Customers.', description: 'Why drag blocks when you can just prompt it?' },
-		{ variant: 7, title: 'The FASTEST way to get leads.', description: 'No code. No delays. Just instant landing pages that convert.' },
+		{ variant: 7, title: 'The FASTEST way to get leads in 30 days.', description: 'No code. No delays. Just instant landing pages that convert.' },
 		{ variant: 8, title: 'Instant Lead Generation Machine.', description: 'No code, no fluff — just a landing page that converts.' },
 		{ variant: 9, title: 'The MAD Lead Generation Machine.', description: 'Landing pages that convert like crazy.' }
 	];
