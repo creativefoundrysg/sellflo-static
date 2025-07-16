@@ -37,9 +37,9 @@
 								</span>
 							</h1>
 							<p class="mt-6 text-xl text-gray-500">
-								Generate high converting landing pages in <span class="italic">seconds</span>. <span
+								High-converting landing pages in <span class="italic">seconds</span>. <span
 									class="bg-yellow-200 px-1 font-semibold text-black">No coding needed!</span
-								> Just say <span class="text-black italic">hey</span> and our AI agents take care of the rest.
+								> Just say <span class="text-black italic">hey</span> and our AI agents do the rest.
 							</p>
 						</div>
 						<Form data={data}/>

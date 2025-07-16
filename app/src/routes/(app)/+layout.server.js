@@ -27,7 +27,7 @@ export async function load({ cookies, url }) {
 		{ variant: 9, title: 'The MAD Lead Generation Machine.', description: 'Landing pages that convert like crazy.' }
 	];
 
-	let disclaimerText = `<span class="font-bold text-black">Transparency note: </span>The extent of cost reduction, time-to-market acceleration, SEO benefits, enhanced customization, flexibility and other features may vary depending on the specific requirements, existing infrastructure, and operational strategies of each organization. While we strive to deliver consistent results, individual outcomes are not guaranteed in any way and are influenced by multiple factors.
+	let disclaimerText = `<span class="font-bold text-zinc-500">Transparency note: </span>The extent of cost reduction, time-to-market acceleration, SEO benefits, lead generation, enhanced customization, flexibility and other features may vary depending on the specific requirements, existing infrastructure, and operational strategies of each organization. While we strive to deliver consistent results, individual outcomes are not guaranteed in any way and are influenced by multiple factors.
                         For precise details, we recommend consulting with our sales and technical teams to understand how our solutions can specifically impact your business. None of the content, text, images or any other form of content here constitute a legally binding offer nor agreement, and the information provided is for illustrative purposes only. Creative Foundry Pte. Ltd. will not be held liable for any direct or indirect damages resulting from the use of this information. 
 						All brand names, logos, and trademarks are the property of their respective owners.`;
 
