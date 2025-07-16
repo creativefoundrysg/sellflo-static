@@ -30,7 +30,7 @@
 						<div class="mt-6 sm:max-w-xl">
 							<h1 class="flex flex-col space-y-2 tracking-tight sm:text-5xl">
 								<span class="block text-4xl font-bold text-gray-900">
-									{@html data.title}<span class="text-base align-top text-gray-400">*</span>
+									{@html data.title}<span class="text-[11px] align-top text-gray-400">*</span>
 								</span>
 								<span class="mt-2 block text-3xl font-light text-gray-600">
 									{@html data.description}
@@ -43,7 +43,6 @@
 							</p>
 						</div>
 						<Form data={data}/>
-						
 					</div>
 				</div>
 			</div>
@@ -103,7 +102,7 @@
 	</main>
 
 	<div class="mt-10 mx-auto max-w-md px-6 sm:max-w-3xl lg:grid lg:max-w-7xl">
-		<p class="gap-y-4 text-xs text-slate-400">
+		<p class="gap-y-4 text-[10px] text-slate-400">
 			<span class="text-xs align-top text-slate-500">*</span>{@html data.disclaimerText}
 		</p>
 	</div>

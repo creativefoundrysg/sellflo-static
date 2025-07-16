@@ -9,7 +9,9 @@
         <input type="hidden" name="_csrf" value="{data.csrfToken}" />
     </div>
     <div class="mt-4 sm:mt-0 sm:ml-2">
-        <button type="submit" class="block w-full rounded-md border border-transparent bg-rose-500 px-5 py-3 text-base font-bold text-white shadow-sm hover:bg-rose-600 focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 focus:outline-hidden sm:px-10">Get Access</button>
+        <button type="submit" class="block w-full rounded-md border border-transparent bg-rose-500 px-5 py-3 text-base font-bold text-white shadow-sm hover:bg-rose-600 focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 focus:outline-hidden sm:px-10">
+            Sign Up
+        </button>
     </div>
 </form>
 <script>
