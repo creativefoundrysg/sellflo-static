@@ -8,8 +8,7 @@
 	<main>
 		<!-- Hero section -->
 		<div class="overflow-hidden pt-8 sm:pt-12 lg:relative lg:py-48">
-			<div
-				class="mx-auto max-w-md px-6 sm:max-w-3xl lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-24 lg:px-8"
+			<div class="mx-auto max-w-md px-6 sm:max-w-3xl lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-24 lg:px-8"
 			>
 				<div>
 					<div class="flex flex-row items-center space-x-5">
@@ -31,16 +30,16 @@
 						<div class="mt-6 sm:max-w-xl">
 							<h1 class="flex flex-col space-y-2 tracking-tight sm:text-5xl">
 								<span class="block text-4xl font-bold text-gray-900">
-									{@html data.title}
+									{@html data.title}<span class="text-base align-top text-gray-400">*</span>
 								</span>
 								<span class="mt-2 block text-3xl font-light text-gray-600">
 									{@html data.description}
 								</span>
 							</h1>
 							<p class="mt-6 text-xl text-gray-500">
-								Generate landing pages in <span class="italic">seconds</span>. <span
+								Generate high converting landing pages in <span class="italic">seconds</span>. <span
 									class="bg-yellow-200 px-1 font-semibold text-black">No coding needed!</span
-								> Just say <span class="font-bold italic">hey</span> and our AI agents take care of the rest.
+								> Just say <span class="text-black italic">hey</span> and our AI agents take care of the rest.
 							</p>
 						</div>
 						<Form data={data}/>
@@ -102,6 +101,13 @@
 			</div>
 		</div>
 	</main>
+
+	<div class="mt-10 mx-auto max-w-md px-6 sm:max-w-3xl lg:grid lg:max-w-7xl">
+		<p class="gap-y-4 text-xs text-slate-400">
+			<span class="text-xs align-top text-slate-500">*</span>{@html data.disclaimerText}
+		</p>
+	</div>
+
 	<footer
 		class="mx-auto flex max-w-md flex-col justify-between overflow-hidden px-6 py-12 sm:max-w-3xl md:flex-row lg:max-w-7xl lg:px-8"
 	>

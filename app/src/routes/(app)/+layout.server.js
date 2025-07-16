@@ -16,16 +16,20 @@ export async function load({ cookies, url }) {
 	}
 
 	const variants = [
-		{ variant: 1, title: 'High-Performance Landing Pages.', description: 'Instant. Powered By AI.' },
-		{ variant: 2, title: 'Fire Your Agency. Let AI Build Your Next Landing Page.', description: 'Generate a Landing Page before your coffee\'s ready.' },
-		{ variant: 3, title: 'Fire Your Agency. Let AI Build Your Next Landing Page.', description: 'Faster than your best dev — and it doesn\'t ask for coffee breaks.' },
-		{ variant: 4, title: 'Your Next Landing Page Writes Itself.', description: 'Just one prompt. Fully built, optimized, and deployed.' },
-		{ variant: 5, title: 'Prompt to Landing Page in under 20 seconds.', description: 'No code. No delays. Just instant landing pages that convert.' },
-		{ variant: 6, title: 'The End of No-Code Builders.', description: 'Why drag blocks when you can just prompt it?' },
-		{ variant: 7, title: 'Prompt to Landing Page in under 20 seconds.', description: 'No code. No delays. Just instant landing pages that convert.' },
-		{ variant: 8, title: 'Turn Your Product into a Page. Instantly.', description: 'No code, no fluff — just a page that converts.' },
-		{ variant: 9, title: 'Less Clicks. More Conversions.', description: 'SellFlo pages are optimized from the first word.' }
+		{ variant: 1, title: 'Get your next 100 Leads.', description: 'Instant Landing Pages. Powered By AI.' },
+		{ variant: 2, title: 'Get your next 100 Customers.', description: 'Generate a Landing Page before your coffee\'s ready.' },
+		{ variant: 3, title: 'Get +100 Customers with AI.', description: 'Fast, instant HIGH CONVERTING Landing Pages.' },
+		{ variant: 4, title: 'Let AI get your next Lead.', description: 'Just one prompt. Fully built, optimized, and deployed.' },
+		{ variant: 5, title: 'Let AI get your next 100 Leads.', description: 'Prompt to Landing Page in under 20 seconds.' },
+		{ variant: 6, title: 'Let AI get your next 100 Customers.', description: 'Why drag blocks when you can just prompt it?' },
+		{ variant: 7, title: 'The FASTEST way to get leads.', description: 'No code. No delays. Just instant landing pages that convert.' },
+		{ variant: 8, title: 'Instant Lead Generation Machine.', description: 'No code, no fluff — just a landing page that converts.' },
+		{ variant: 9, title: 'The MAD Lead Generation Machine.', description: 'Landing pages that convert like crazy.' }
 	];
+
+	let disclaimerText = `<span class="font-bold text-black">Transparency note: </span>The extent of cost reduction, time-to-market acceleration, SEO benefits, enhanced customization, flexibility and other features may vary depending on the specific requirements, existing infrastructure, and operational strategies of each organization. While we strive to deliver consistent results, individual outcomes are not guaranteed in any way and are influenced by multiple factors.
+                        For precise details, we recommend consulting with our sales and technical teams to understand how our solutions can specifically impact your business. None of the content, text, images or any other form of content here constitute a legally binding offer nor agreement, and the information provided is for illustrative purposes only. Creative Foundry Pte. Ltd. will not be held liable for any direct or indirect damages resulting from the use of this information. 
+						All brand names, logos, and trademarks are the property of their respective owners.`;
 
 	let selectedVariant;
 	const urlVariant = parseInt(url.searchParams.get('v'));
@@ -60,6 +64,7 @@ export async function load({ cookies, url }) {
 		csrfToken,
 		variant: selectedVariant.variant,
 		title: selectedVariant.title,
-		description: selectedVariant.description
+		description: selectedVariant.description,
+		disclaimerText: disclaimerText
 	};
 }
