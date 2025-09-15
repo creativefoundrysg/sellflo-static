@@ -4,7 +4,6 @@
 	let { data } = $props();
 
     function z(c, a, l, v) {
-        alert("hi")
         try {
             trackEvent({
                 category: c, // 'GTM Funnel: Intent'
