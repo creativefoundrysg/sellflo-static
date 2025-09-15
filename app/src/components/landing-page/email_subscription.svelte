@@ -113,7 +113,7 @@
 					</EmailForm>
 				</div>
 				<p class="mt-3 text-blue-400 text-xs">
-					By signing up, you consent to the collection and use of your information as outlined in our <a class="underline" target="_blank" data-sveltekit-reload href="/privacy-policy">Privacy Policy</a> (PIPEDA compliant).
+					By signing up, you consent to the collection and use of your information as outlined in our <a class="underline" target="_blank" data-sveltekit-reload href="/privacy-policy">Privacy Policy</a> (PIPEDA/PDPA compliant).
 				</p>
 			</div>
 		</div>
