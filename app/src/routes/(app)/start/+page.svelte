@@ -35,7 +35,7 @@
 
                 <p class="mt-6 font-text my-4 text-neutral-600 leading-loose">
                     Join us to get your GTM audit. Early bird customers get lifetime 20% off.
-                    <span class="font-bold">Don't miss out this window</span> and start your AI journey today by booking a discovery call. Limited slots available.
+                    <span class="font-bold">Don't miss out this window</span> and start your GTM journey today by booking a discovery call. Limited slots available.
                 </p>
             </div>
             <!-- End Col -->

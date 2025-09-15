@@ -68,7 +68,7 @@ export async function POST({ request, cookies, url }) {
             "timestamp": getCurrentSGT('readable'),
             "notifications_url": "https://creativefoundry.ai",
         },
-        "TemplateId": 41037686
+        "TemplateId": 41489299
     });
 
     await client.sendEmailWithTemplate({
@@ -90,7 +90,7 @@ export async function POST({ request, cookies, url }) {
             "timestamp": getCurrentSGT('readable'),
             "notifications_url": "https://creativefoundry.ai",
         },
-        "TemplateId": 41038497
+        "TemplateId": 41489289
     });
 
     let response = { success: 'booking_complete' }

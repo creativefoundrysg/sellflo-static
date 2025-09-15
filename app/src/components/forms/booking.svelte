@@ -39,7 +39,7 @@
 
     /* ----------  CSS ---------- */
     let defaultCSS = $state("")
-    let defaultClasses = "cursor-pointer min-h-0 min-w-0 cta dark:shadow-none shadow-neutral-500 -mt-px relative bg-gradient-to-t from-rose-600 to-[#F3134D] dark:from-rose-700 dark:to-rose-600 dark:bg-rose-600 text-white text-sm"
+    let defaultClasses = "cursor-pointer min-h-0 min-w-0 cta dark:shadow-none shadow-neutral-500 -mt-px relative bg-gradient-to-t from-blue-600 to-blue-700 text-white text-sm"
     let disabledClasses = "min-h-0 min-w-0 cta-disabled dark:shadow-none shadow-neutral-500 -mt-px relative bg-slate-400 dark:bg-slate-800 dark:text-slate-300 text-slate-100 text-xs"
 
     /* ----------  TABS ---------- */
