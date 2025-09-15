@@ -22,7 +22,7 @@
 </script>
 <form
     method="POST"
-    action="/api?/form"
+    action="/api/form?/submit"
     class={classes}
 >
         <label for="email" class="sr-only">Email address</label>    
