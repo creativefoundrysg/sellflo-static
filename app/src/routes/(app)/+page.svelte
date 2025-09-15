@@ -1,8 +1,23 @@
 <script>
 	import { onMount } from 'svelte';
-	import Form from '../../components/form.svelte';
+	import EmailForm from '$components/forms/email.svelte';
+    import { trackEvent } from "$lib/client/analytics/tracking.js";
 	let { data } = $props();
 	let imageLoaded = $state(false);
+
+    function z(c, a, l, v) {
+        alert("hi")
+        try {
+            trackEvent({
+                category: c, // 'GTM Funnel: Intent'
+                action: a, //'GTM Booking: Input Email',
+                label: l, //'GTM Email Subscription Box',
+                value: v //20
+            });
+        } catch (e) {
+            console.error("Error tracking:", e);
+        }
+    }
 </script>
 
 <header class="overflow-hidden bg-slate-100 lg:bg-transparent lg:px-5">
@@ -93,9 +108,11 @@
 			</figure>
 		</div>
 		<div class="bg-white pt-16 lg:col-span-7 lg:bg-transparent lg:pl-16 lg:pt-0 xl:pl-20">
-			<div class="mx-auto -mt-10 mb-6 px-4 sm:px-6 md:max-w-2xl md:px-4 lg:px-0">
+			<a href="#preview"
+				onclick={z('GTM Funnel:Awareness', 'Preview Document', 'Click', 10)} 
+				class="block mx-auto -mt-10 mb-6 px-4 sm:px-6 md:max-w-2xl md:px-4 lg:px-0">
 				<img class="h-14 w-auto" src="/logo.svg" alt="SellFlo" />
-			</div>
+			</a>
 			<div class="mx-auto px-4 sm:px-6 md:max-w-2xl md:px-4 lg:px-0">
 				<h1 class="font-display text-3xl font-extrabold text-slate-900 sm:text-6xl">
 					Idea to first 100 customers with AI
@@ -106,6 +123,7 @@
 				</p>
 				<div class="mt-8 flex gap-4">
 					<a
+						onclick={z('GTM Funnel:Consideration', 'Download GTM Plan', 'Download', 100)}
 						class="inline-flex items-center justify-center gap-2 rounded-md bg-blue-600 px-4 py-4 text-base font-semibold tracking-tight text-white shadow-sm hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 active:bg-blue-700 active:text-white/80 disabled:opacity-30 disabled:hover:bg-blue-600"
 						color="blue"
 						variant="solid"
@@ -385,6 +403,7 @@
 						</ul>
 					</div>
 					<a
+						onclick={z('GTM Funnel:Consideration', 'Seed Plan Select', 'Submit', 100)}
 						class="mt-8 inline-flex justify-center rounded-md bg-slate-900 px-4 py-1 text-base font-semibold tracking-tight text-white shadow-sm hover:bg-slate-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 active:bg-slate-700 active:text-white/80 disabled:opacity-30 disabled:hover:bg-slate-900"
 						color="slate"
 						aria-label="Get started with the Essential plan for $15"
@@ -495,6 +514,7 @@
 						</ul>
 					</div>
 					<a
+						onclick={z('GTM Funnel:Consideration', 'Growth Plan Select', 'Submit', 200)}
 						class="mt-8 inline-flex justify-center rounded-md bg-white px-4 py-1 text-base font-semibold tracking-tight text-blue-600 shadow-sm hover:text-blue-700 focus-visible:text-blue-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:bg-blue-50 active:text-blue-900/80 disabled:opacity-40 disabled:hover:text-blue-600"
 						color="white"
 						aria-label="Get started with the Complete plan for $229"
@@ -592,6 +612,7 @@
 						</ul>
 					</div>
 					<a
+						onclick={z('GTM Funnel:Consideration', 'Enterprise Plan Select', 'Submit', 500)}
 						class="mt-8 inline-flex justify-center rounded-md bg-slate-900 px-4 py-1 text-base font-semibold tracking-tight text-white shadow-sm hover:bg-slate-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 active:bg-slate-700 active:text-white/80 disabled:opacity-30 disabled:hover:bg-slate-900"
 						color="slate"
 						aria-label="Get started with the Essential plan for $15"
@@ -635,7 +656,7 @@
 		</figure>
 	</div>
 </aside>
-<section id="free-chapters" aria-label="subscribe" class="scroll-mt-14 bg-blue-600 sm:scroll-mt-32">
+<section id="email-subscription" aria-label="subscribe" class="scroll-mt-14 bg-blue-600 sm:scroll-mt-32">
 	<div class="overflow-hidden lg:relative">
 		<div
 			class="relative mx-auto grid grid-cols-1 items-end gap-y-12 px-4 py-20 sm:px-6 md:max-w-2xl md:px-4 lg:static lg:max-w-5xl lg:grid-cols-2 lg:px-8 lg:py-28 xl:py-32"
@@ -699,15 +720,16 @@
 					Enter your email address and we'll send you a free sample report of a startup.
 				</p>
 			</div>
-			<form class="lg:pl-16">
+			<div class="lg:pl-16">
 				<h3 class="text-base font-medium tracking-tight text-white">
-					Get a free sample straight to your inbox<!-- -->
+					Get a free sample straight to your inbox
 					<span aria-hidden="true">→</span>
 				</h3>
 				<div class="mt-4 sm:relative sm:flex sm:items-center sm:py-0.5 sm:pr-2.5">
-					<Form data={data} classes="mt-4 relative flex items-center sm:py-0.5 sm:pr-2.5">
+					<EmailForm data={data} classes="mt-4 relative flex items-center sm:py-0.5 sm:pr-2.5">
 						<div class="relative sm:static sm:flex-auto">
 								<input
+									onclick={z('GTM Funnel:Consideration', 'Email Subscribe', 'Free Sample', 50)}
 									name="email"
 									type="email"
 									id="email-address"
@@ -722,13 +744,14 @@
 						</div>
 						<button
 							class="mt-4 inline-flex w-full justify-center rounded-md bg-white px-4 py-1 text-base font-semibold tracking-tight text-blue-600 shadow-sm hover:text-blue-700 focus-visible:text-blue-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:bg-blue-50 active:text-blue-900/80 disabled:opacity-40 disabled:hover:text-blue-600 sm:relative sm:z-10 sm:mt-0 sm:w-auto sm:flex-none"
+							onclick={z('GTM Funnel:Consideration', 'Email Subscribe', 'Submit', 100)}
 							type="submit"
 							color="white"
 							variant="solid">Get free sample</button
 						>
-					</Form>
+					</EmailForm>
 				</div>
-			</form>
+			</div>
 		</div>
 	</div>
 </section>
