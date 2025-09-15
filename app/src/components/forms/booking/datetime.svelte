@@ -76,9 +76,9 @@
 
         try {
             trackEvent({
-                category: 'Funnel: Intent',
-                action: 'Booking: Navigate Next Month',
-                label: 'Date Selector',
+                category: 'GTM Funnel: Intent',
+                action: 'GTM Booking: Navigate Next Month',
+                label: 'GTM Date Selector',
                 value: 10
             });
         } catch (e) {
@@ -92,9 +92,9 @@
 
         try {
             trackEvent({
-                category: 'Funnel: Intent',
-                action: 'Booking: Select Date',
-                label: 'Date Selector',
+                category: 'GTM Funnel: Intent',
+                action: 'GTM Booking: Select Date',
+                label: 'GTM Date Selector',
                 value: 20
             });
         } catch (e) {

@@ -99,9 +99,9 @@
 
             try {
                 trackEvent({
-                    category: 'Funnel: Intent',
-                    action: 'Booking: Clicked CTA',
-                    label: 'Time Tab',
+                    category: 'GTM Funnel: Intent',
+                    action: 'GTM Booking: Clicked CTA',
+                    label: 'GTM Time Tab',
                     value: 10
                 });
             } catch (e) {
@@ -112,9 +112,9 @@
 
             try {
                 trackEvent({
-                    category: 'Funnel: Intent',
-                    action: 'Booking: Clicked CTA',
-                    label: 'Form Tab',
+                    category: 'GTM Funnel: Intent',
+                    action: 'GTM Booking: Clicked CTA',
+                    label: 'GTM Form Tab',
                     value: 10
                 });
             } catch (e) {
@@ -125,9 +125,9 @@
 
             try {
                 trackEvent({
-                    category: 'Funnel: Intent',
-                    action: 'Booking: Clicked CTA',
-                    label: 'Confirm Tab',
+                    category: 'GTM Funnel: Intent',
+                    action: 'GTM Booking: Clicked CTA',
+                    label: 'GTM Confirm Tab',
                     value: 20
                 });
             } catch (e) {
@@ -138,9 +138,9 @@
 
             try {
                 trackEvent({
-                    category: 'Funnel: Intent',
-                    action: 'Booking: Clicked CTA',
-                    label: 'Completed',
+                    category: 'GTM Funnel: Intent',
+                    action: 'GTM Booking: Clicked CTA',
+                    label: 'GTM Completed',
                     value: 30
                 });
             } catch (e) {

@@ -21,9 +21,9 @@
     async function download() {
         try {
             trackEvent({
-                category: 'Funnel: Intent',
-                action: 'Booking: Download Invite',
-                label: 'Booking Completed',
+                category: 'GTM Funnel: Intent',
+                action: 'GTM Booking: Download Invite',
+                label: 'GTM Booking Completed',
                 value: 40
             });
         } catch (e) {
