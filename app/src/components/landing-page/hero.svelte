@@ -62,7 +62,7 @@
                         target="_blank"
                         href="/transparency"
                         onclick={z('GTM Funnel:Awareness', 'View Transparency Report', 'Click', 10)} 
-                        class="z-10 inline-block px-3 py-1 text-xs font-medium text-neutral-600"
+                        class="z-10 inline-block px-3 py-1 text-[10px] font-medium text-slate-400"
                     >
                        AI Transparency Disclaimer
                     </a>
@@ -130,7 +130,7 @@
 					Our AI Co-Pilot researches your market, validates demand, and delivers a go-to-market plan
 					in hours — not months.
 				</p>
-				<div class="mt-8 flex gap-4">
+				<div class="mt-8 flex gap-4 justify-center sm:justify-start">
 					<a
 						onclick={z('GTM Funnel:Consideration', 'Download GTM Plan', 'Download', 100)}
 						class="inline-flex items-center justify-center gap-2 rounded-md bg-blue-600 px-4 py-4 text-base font-semibold tracking-tight text-white shadow-sm hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 active:bg-blue-700 active:text-white/80 disabled:opacity-30 disabled:hover:bg-blue-600"

@@ -87,8 +87,8 @@
 					<span aria-hidden="true">→</span>
 				</h3>
 				<div class="mt-4 sm:relative sm:flex sm:items-center sm:py-0.5 sm:pr-2.5">
-					<EmailForm data={data} classes="mt-4 relative flex items-center sm:py-0.5 sm:pr-2.5">
-						<div class="relative sm:static sm:flex-auto">
+					<EmailForm data={data} classes="mt-4 relative flex flex-col sm:flex-row items-center justify-center sm:py-0.5 sm:pr-2.5">
+						<div class="mb-2 sm:mb-0 relative sm:static sm:flex-auto w-full">
 								<input
 									onclick={z('GTM Funnel:Consideration', 'Email Subscribe', 'Free Sample', 50)}
 									name="email"
@@ -104,7 +104,7 @@
 							></div>
 						</div>
 						<button
-							class="mt-4 inline-flex w-full justify-center rounded-md bg-white px-4 py-1 text-base font-semibold tracking-tight text-blue-600 shadow-sm hover:text-blue-700 focus-visible:text-blue-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:bg-blue-50 active:text-blue-900/80 disabled:opacity-40 disabled:hover:text-blue-600 sm:relative sm:z-10 sm:mt-0 sm:w-auto sm:flex-none"
+							class="mt-0 inline-flex w-full justify-center rounded-md bg-white px-4 py-1 text-base font-semibold tracking-tight text-blue-600 shadow-sm hover:text-blue-700 focus-visible:text-blue-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:bg-blue-50 active:text-blue-900/80 disabled:opacity-40 disabled:hover:text-blue-600 sm:relative sm:z-10 sm:w-auto sm:flex-none"
 							onclick={z('GTM Funnel:Consideration', 'Email Subscribe', 'Submit', 100)}
 							type="submit"
 							color="white"

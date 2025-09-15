@@ -15,7 +15,7 @@
                 <span class="flex absolute z-99 left-0 top-0 w-[160px] h-[70px] items-stretch"></span>
                 <img src="/logo.svg" alt="Creative Foundry" class="w-20" />
             </a>
-            <div class="flex items-center gap-x-6 text-zinc-400 text-xs">    
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-y-6 sm:gap-y-2 gap-x-6 text-zinc-400 text-xs">    
                 <a onclick={() => {
                     trackEvent({
                         category: 'Funnel: Awareness',
