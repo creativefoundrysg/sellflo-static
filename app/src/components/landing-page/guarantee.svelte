@@ -23,7 +23,7 @@
 	<div class="relative mx-auto px-4 sm:px-6 md:max-w-2xl md:px-4 lg:px-2">
 		<figure>
 			<blockquote
-				class="font-display mt-10 text-4xl font-medium tracking-tight text-slate-900 sm:text-center"
+				class="font-display text-4xl font-medium tracking-tight text-slate-900 sm:text-center"
 			>
 				<p>14 day money-back guarantee if you don't get actionable insights.</p>
 			</blockquote>

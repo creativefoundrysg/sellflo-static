@@ -1,8 +1,8 @@
 <section
 	aria-labelledby="GTM-Strategy-Research"
-	class="scroll-mt-14 py-16 sm:scroll-mt-32 sm:py-20 lg:py-10">
+	class="scroll-mt-14 py-10 sm:scroll-mt-32 sm:py-10 lg:py-10">
 	<div class="mx-auto px-4 sm:px-6 md:max-w-2xl md:px-4 lg:max-w-4xl lg:px-12">
-		<p class="font-display mt-8 text-4xl font-bold tracking-tight text-slate-900">
+		<p class="font-display sm:mt-8 text-4xl font-bold tracking-tight text-slate-900">
 			Your Guided Path to Traction
 		</p>
 		<p class="mt-4 text-lg tracking-tight text-slate-700">
