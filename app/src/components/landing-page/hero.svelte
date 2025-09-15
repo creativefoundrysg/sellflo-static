@@ -23,7 +23,7 @@
 	>
 		<div class="relative flex items-end lg:col-span-5 lg:row-span-2">
 			<div
-				class="rounded-br-6xl absolute -bottom-12 -top-20 left-0 right-1/2 z-10 bg-blue-100 text-white/10 md:bottom-8 lg:-inset-y-32 lg:left-[-100vw] lg:right-full lg:-mr-40"
+				class="rounded-br-6xl absolute -bottom-12 -top-20 left-0 right-1/2 z-10 bg-blue-600 text-white/10 md:bottom-8 lg:-inset-y-32 lg:left-[-100vw] lg:right-full lg:-mr-40"
 			>
 				<svg aria-hidden="true" class="absolute inset-0 h-full w-full">
 					<defs>
