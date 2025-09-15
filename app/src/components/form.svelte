@@ -23,8 +23,7 @@
 <form
     method="POST"
     action="/api/form?/submit"
-    class={classes}
->
+    class={classes}>
         <label for="email" class="sr-only">Email address</label>    
         <input type="hidden" name="_csrf" value="{data.csrfToken}" />
         {@render children?.()}

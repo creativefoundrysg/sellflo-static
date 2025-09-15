@@ -1,4 +1,5 @@
 <script>
+	import { onMount } from 'svelte';
 	import Form from '../../components/form.svelte';
 	let { data } = $props();
 	let imageLoaded = $state(false);
@@ -707,6 +708,7 @@
 					<Form data={data} classes="mt-4 relative flex items-center sm:py-0.5 sm:pr-2.5">
 						<div class="relative sm:static sm:flex-auto">
 								<input
+									name="email"
 									type="email"
 									id="email-address"
 									required=""
@@ -730,21 +732,3 @@
 		</div>
 	</div>
 </section>
-<footer class="relative pb-20 pt-5 sm:pb-32 sm:pt-14">
-	<div
-		class="mask-[linear-gradient(white,transparent)] absolute inset-x-0 top-0 h-32 text-slate-900/10"
-	>
-		<svg aria-hidden="true" class="absolute inset-0 h-full w-full">
-			<defs>
-				<pattern id="_S_7_" width="128" height="128" patternUnits="userSpaceOnUse" x="50%">
-					<path d="M0 128V.5H128" fill="none" stroke="currentColor"></path>
-				</pattern>
-			</defs>
-			<rect width="100%" height="100%" fill="url(#_S_7_)"></rect>
-		</svg>
-	</div>
-	<div class="relative text-center text-sm text-slate-600">
-		<p>Copyright &copy; 2025 Creative Foundry Pte. Ltd.</p>
-		<p>All rights reserved.</p>
-	</div>
-</footer>

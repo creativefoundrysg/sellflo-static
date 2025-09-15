@@ -92,8 +92,13 @@ export function validateRequest(request, options = {}) {
  * Validates CSRF token
  */
 export function validateCSRF(cookies, data) {
-    const csrfToken = data._csrf;
+    console.log("Form data received:", Object.fromEntries(data.entries()));
+    
+    // Use .get() method for FormData objects
+    const csrfToken = data.get('_csrf');
     const cookieToken = cookies.get('csrfToken');
+
+    console.log("Validating CSRF token:", { csrfToken, cookieToken });
     
     if (!csrfToken || csrfToken !== cookieToken) {
         console.warn('CSRF token validation failed');

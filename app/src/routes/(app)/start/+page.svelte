@@ -1,5 +1,6 @@
 <script>
     import { onMount } from "svelte";
+    import Header from "$components/header/standard.svelte";
     import BookingForm from "$components/forms/booking.svelte";
     import { trackEvent } from "$lib/client/analytics/tracking.js";
     
@@ -16,6 +17,7 @@
         })
     });
 </script>
+<Header />
 <div class="bg-white min-h-[90vh]">
     <div class="max-w-[85rem] px-4 sm:px-6 lg:px-8 lg:py-14 mx-auto">
         <!-- Grid -->
