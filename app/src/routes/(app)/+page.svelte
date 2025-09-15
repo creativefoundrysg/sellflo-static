@@ -307,7 +307,7 @@
 			Pick your package
 		</p>
 		<p class="mt-4 max-w-xl text-lg tracking-tight text-slate-600">
-			Our AI GTM Co-Pilot is available in two different packages so you can pick the one that's
+			Our AI GTM Co-Pilot is available in three different packages so you can pick the one that's
 			right for you.
 		</p>
 	</div>
@@ -321,11 +321,13 @@
 					<p class="mt-2 text-lg tracking-tight text-slate-600">
 						The perfect starting point for seed-stage founders and lean marketing teams.
 					</p>
-					<p class="font-display order-first flex font-bold">
-						<span class="text-[1.75rem]/9 text-slate-500">$</span><span
-							class="ml-1 mt-1 text-7xl tracking-tight text-slate-900">499</span
-						>
-					</p>
+					<div class="font-display order-first flex flex-col font-bold">
+						<p class="flex flex-row">
+							<span class="text-[1.75rem]/9 text-slate-500">$</span>
+							<span class="ml-1 mt-1 text-7xl tracking-tight text-slate-900">499</span>
+						</p>
+						<span class="text-xl text-slate-500 line-through ml-6 mr-2">$599</span>
+					</div>
 					<div class="order-last mt-8">
 						<ul
 							role="list"
@@ -391,8 +393,12 @@
 				</div>
 			</div>
 			<div
-				class="sm:rounded-5xl relative bg-blue-600 px-4 py-16 sm:px-10 sm:shadow-lg md:py-12 lg:px-12"
-			>
+				class="sm:rounded-5xl relative bg-blue-600 px-4 py-16 sm:px-10 sm:shadow-lg md:py-12 lg:px-12">
+				<div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+					<div class="bg-gradient-to-r from-red-400 to-pink-500 text-white text-xs font-bold px-4 py-2 rounded-full">
+						MOST POPULAR
+					</div>
+				</div>
 				<div class="mask-[linear-gradient(white,transparent)] absolute inset-0 text-white/10">
 					<svg aria-hidden="true" class="absolute inset-0 h-full w-full">
 						<defs>
@@ -415,11 +421,15 @@
 					<p class="mt-2 text-lg tracking-tight text-white">
 						For Series-A funded startups and above
 					</p>
-					<p class="font-display order-first flex font-bold">
-						<span class="text-[1.75rem]/9 text-blue-200">$</span><span
-							class="ml-1 mt-1 text-7xl tracking-tight text-white">1999</span
-						>
-					</p>
+					<div class="font-display order-first flex flex-col font-bold">
+						<div class="flex flex-row">
+							<p class="flex flex-row">
+								<span class="text-[1.75rem]/9 text-blue-200">$</span>
+								<span class="ml-1 mt-1 text-7xl tracking-tight text-white">1999</span>
+							</p>
+						</div>
+						<span class="text-xl text-blue-200 line-through ml-6 mr-2">$2499</span>
+					</div>
 					<div class="order-last mt-8">
 						<ul
 							role="list"
@@ -536,11 +546,9 @@
 								<svg
 									aria-hidden="true"
 									viewBox="0 0 32 32"
-									class="h-8 w-8 flex-none fill-slate-600"
-								>
+									class="h-8 w-8 flex-none fill-slate-600">
 									<path
-										d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z"
-									>
+										d="M11.83 15.795a1 1 0 0 0-1.66 1.114l1.66-1.114Zm9.861-4.072a1 1 0 1 0-1.382-1.446l1.382 1.446ZM14.115 21l-.83.557a1 1 0 0 0 1.784-.258L14.115 21Zm.954.3c1.29-4.11 3.539-6.63 6.622-9.577l-1.382-1.446c-3.152 3.013-5.704 5.82-7.148 10.424l1.908.598Zm-4.9-4.391 3.115 4.648 1.661-1.114-3.114-4.648-1.662 1.114Z">
 									</path>
 								</svg><span class="ml-4">Investor-ready deck adaptation</span>
 							</li>
