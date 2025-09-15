@@ -41,20 +41,33 @@
 					<rect width="100%" height="100%" fill="url(#_S_2_)"></rect>
 				</svg>
 			</div>
-			<div
-				class="relative z-10 mx-auto flex w-64 rounded-xl border-4 border-slate-600 bg-slate-600 shadow-xl md:w-80 lg:w-auto"
-			>
-				<img
-					alt=""
-					width="960"
-					height="1284"
-					decoding="async"
-					data-nimg="1"
-					class="w-full rounded-md"
-					style="color: transparent"
-					src="/pivot.webp"
-				/>
-			</div>
+            <div class="flex flex-col">
+                <div
+                    class="relative z-10 mx-auto flex w-64 rounded-xl border-4 border-slate-600 bg-slate-600 shadow-xl md:w-80 lg:w-auto"
+                >
+                    <img
+                        alt=""
+                        width="960"
+                        height="1284"
+                        decoding="async"
+                        data-nimg="1"
+                        class="w-full rounded-md"
+                        style="color: transparent"
+                        src="/pivot.webp"
+                    />
+                </div>
+            
+                <div class="flex justify-end mt-2">
+                    <a 
+                        target="_blank"
+                        href="/transparency"
+                        onclick={z('GTM Funnel:Awareness', 'View Transparency Report', 'Click', 10)} 
+                        class="z-10 inline-block px-3 py-1 text-xs font-medium text-neutral-600"
+                    >
+                       AI Transparency Disclaimer
+                    </a>
+                </div>
+            </div>
 		</div>
 		<div class="relative px-4 sm:px-6 lg:col-span-7 lg:pb-14 lg:pl-16 lg:pr-0 xl:pl-20">
 			<div

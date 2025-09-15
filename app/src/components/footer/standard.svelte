@@ -23,7 +23,7 @@
                         label: `Footer Contact Link`,
                         value: 10
                     })
-                }} data-sveltekit-reload href="https://creativefoundry.ai/contact">Contact</a>
+                }} data-sveltekit-reload href="/contact">Contact</a>
                 <a onclick={() => {
                     trackEvent({
                         category: 'Funnel: Awareness',
@@ -31,7 +31,7 @@
                         label: `Footer Privacy Policy Link`,
                         value: 10
                     })
-                }} data-sveltekit-reload href="https://creativefoundry.ai/privacy-policy">Privacy Policy</a>
+                }} data-sveltekit-reload href="/privacy-policy">Privacy Policy</a>
                 <a onclick={() => {
                     trackEvent({
                         category: 'Funnel: Awareness',
@@ -39,7 +39,15 @@
                         label: `Footer Terms Of Service Link`,
                         value: 10
                     })
-                }} data-sveltekit-reload href="https://creativefoundry.ai/terms-of-service">Terms Of Service</a>
+                }} data-sveltekit-reload href="/terms-of-service">Terms Of Service</a>
+                 <a onclick={() => {
+                    trackEvent({
+                        category: 'Funnel: Awareness',
+                        action: 'Click: Transparency',
+                        label: `Footer Transparency Link`,
+                        value: 10
+                    })
+                }} data-sveltekit-reload href="/transparency">Transparency</a>
             </div>
             <p class="text-xs text-neutral-300">
                 &copy; 2022 Creative Foundry Pte. Ltd. <span class="text-gray-300">UEN: 202215906M</span>
