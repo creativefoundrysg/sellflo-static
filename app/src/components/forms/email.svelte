@@ -8,7 +8,7 @@
     } = $props();
 
     onMount(() => {
-        const form = document.getElementById('lead-form');
+        const form = document.getElementById('email-form');
         form.addEventListener('submit', (e) => {
             const email = form.email.value.trim();
             const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -21,6 +21,7 @@
     });
 </script>
 <form
+    id="email-form"
     method="POST"
     action="/api/form?/submit"
     class={classes}>

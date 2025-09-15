@@ -41,9 +41,9 @@
 					<rect width="100%" height="100%" fill="url(#_S_2_)"></rect>
 				</svg>
 			</div>
-            <div class="flex flex-col">
+            <div class="w-full flex flex-col items-center md:items-start">
                 <div
-                    class="relative z-10 mx-auto flex w-64 rounded-xl border-4 border-slate-600 bg-slate-600 shadow-xl md:w-80 lg:w-auto"
+                    class="relative z-10 flex w-64 rounded-xl border-4 border-slate-600 bg-slate-600 shadow-xl md:w-80 lg:w-auto"
                 >
                     <img
                         alt=""
@@ -57,7 +57,7 @@
                     />
                 </div>
             
-                <div class="flex justify-end mt-2">
+                <div class="flex w-64 justify-end mt-2 md:w-80 lg:w-auto">
                     <a 
                         target="_blank"
                         href="/transparency"
