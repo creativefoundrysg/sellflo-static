@@ -1,0 +1,67 @@
+// src/lib/csrf.js
+
+const CSRF_SECRET = process.env.CSRF_SECRET || 'dev-secret-change-me';
+
+// Base64url encode (browser/node safe)
+function toBase64Url(buffer) {
+  return Buffer.from(buffer).toString('base64')
+    .replace(/\+/g, '-')
+    .replace(/\//g, '_')
+    .replace(/=+$/, '');
+}
+
+// Base64url decode
+function fromBase64Url(str) {
+  str = str.replace(/-/g, '+').replace(/_/g, '/');
+  while (str.length % 4) str += '=';
+  return Buffer.from(str, 'base64');
+}
+
+// Text to Uint8Array
+function encoder(str) {
+  return new TextEncoder().encode(str);
+}
+
+export async function generateCsrfToken(payload = {}) {
+  const exp = payload.exp || (Math.floor(Date.now() / 1000) + 60 * 60); // 1h expiry
+  const nonce = typeof crypto.randomUUID === 'function' ? crypto.randomUUID() : Math.random().toString(36).slice(2, 18);
+  const data = JSON.stringify({ nonce, exp });
+
+  // Key import
+  const key = await crypto.subtle.importKey(
+    'raw',
+    encoder(CSRF_SECRET),
+    { name: 'HMAC', hash: 'SHA-256' },
+    false,
+    ['sign', 'verify']
+  );
+  // Sign the data
+  const signature = await crypto.subtle.sign('HMAC', key, encoder(data));
+  // Encode and return
+  return `${toBase64Url(encoder(data))}.${toBase64Url(signature)}`;
+}
+
+export async function verifyCsrfToken(token) {
+  if (!token || typeof token !== 'string' || !token.includes('.')) return false;
+  const [dataB64, sigB64] = token.split('.');
+  let data;
+  try {
+    data = fromBase64Url(dataB64).toString();
+    const payload = JSON.parse(data);
+    // Expiry check
+    if (payload.exp && payload.exp < Math.floor(Date.now() / 1000)) return false;
+
+    const key = await crypto.subtle.importKey(
+      'raw',
+      encoder(CSRF_SECRET),
+      { name: 'HMAC', hash: 'SHA-256' },
+      false,
+      ['sign', 'verify']
+    );
+    const expectedSig = fromBase64Url(sigB64);
+    const valid = await crypto.subtle.verify('HMAC', key, expectedSig, encoder(data));
+    return valid;
+  } catch (e) {
+    return false;
+  }
+}

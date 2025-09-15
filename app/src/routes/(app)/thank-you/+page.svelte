@@ -3,7 +3,7 @@
         <h1 style="word-spacing: 4px;" class="mt-3 font-display text-7xl font-light tracking-tight text-zinc-800">
             <span class="font-medium">Thank You.</span>
         </h1>
-        <p class="text-center mt-2 text-xl dark:text-zinc-400">You will receive an update via E-Mail from us in the next few days.</p>
+        <p class="text-center mt-2 text-xl dark:text-zinc-400">Your request has been received. You will receive an update via E-Mail from us in the next few days.</p>
     </div>
     
     <AsiaSVG show={show}/>

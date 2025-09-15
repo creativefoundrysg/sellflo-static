@@ -1,5 +1,5 @@
 <script>
-	import Form from './components/form.svelte';
+	import Form from '../../components/form.svelte';
 	let { data } = $props();
 	let imageLoaded = $state(false);
 </script>
@@ -388,7 +388,7 @@
 						color="slate"
 						aria-label="Get started with the Essential plan for $15"
 						variant="solid"
-						href="#">Get started</a
+						href="/start">Get started</a
 					>
 				</div>
 			</div>
@@ -498,7 +498,7 @@
 						color="white"
 						aria-label="Get started with the Complete plan for $229"
 						variant="solid"
-						href="#">Get started</a
+						href="/start">Get started</a
 					>
 				</div>
 			</div>
@@ -595,7 +595,7 @@
 						color="slate"
 						aria-label="Get started with the Essential plan for $15"
 						variant="solid"
-						href="#">Get started</a
+						href="/start">Get started</a
 					>
 				</div>
 			</div>
@@ -704,25 +704,27 @@
 					<span aria-hidden="true">→</span>
 				</h3>
 				<div class="mt-4 sm:relative sm:flex sm:items-center sm:py-0.5 sm:pr-2.5">
-					<div class="relative sm:static sm:flex-auto">
-						<input
-							type="email"
-							id="email-address"
-							required=""
-							aria-label="Email address"
-							placeholder="Email address"
-							class="focus:outline-hidden peer relative z-10 w-full appearance-none bg-transparent px-4 py-2 text-base text-white placeholder:text-white/70 sm:py-3"
-						/>
-						<div
-							class="absolute inset-0 rounded-md border border-white/20 peer-focus:border-blue-300 peer-focus:bg-blue-500 peer-focus:ring-1 peer-focus:ring-blue-300 sm:rounded-xl"
-						></div>
-					</div>
-					<button
-						class="mt-4 inline-flex w-full justify-center rounded-md bg-white px-4 py-1 text-base font-semibold tracking-tight text-blue-600 shadow-sm hover:text-blue-700 focus-visible:text-blue-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:bg-blue-50 active:text-blue-900/80 disabled:opacity-40 disabled:hover:text-blue-600 sm:relative sm:z-10 sm:mt-0 sm:w-auto sm:flex-none"
-						type="submit"
-						color="white"
-						variant="solid">Get free sample</button
-					>
+					<Form data={data} classes="mt-4 relative flex items-center sm:py-0.5 sm:pr-2.5">
+						<div class="relative sm:static sm:flex-auto">
+								<input
+									type="email"
+									id="email-address"
+									required=""
+									aria-label="Email address"
+									placeholder="Email address"
+									class="focus:outline-hidden peer border-none relative z-10 w-full appearance-none bg-transparent px-4 py-2 text-base text-white placeholder:text-white/70 sm:py-3"
+								/>
+							<div
+								class="absolute inset-0 rounded-md border border-white/20 peer-focus:border-blue-300 peer-focus:bg-blue-500 peer-focus:ring-1 peer-focus:ring-blue-300 sm:rounded-xl"
+							></div>
+						</div>
+						<button
+							class="mt-4 inline-flex w-full justify-center rounded-md bg-white px-4 py-1 text-base font-semibold tracking-tight text-blue-600 shadow-sm hover:text-blue-700 focus-visible:text-blue-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:bg-blue-50 active:text-blue-900/80 disabled:opacity-40 disabled:hover:text-blue-600 sm:relative sm:z-10 sm:mt-0 sm:w-auto sm:flex-none"
+							type="submit"
+							color="white"
+							variant="solid">Get free sample</button
+						>
+					</Form>
 				</div>
 			</form>
 		</div>
