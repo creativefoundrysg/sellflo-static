@@ -9,12 +9,12 @@ import {
 import { createICSFile } from '$lib/server/ics';
 import { validateAPIRequest } from '$lib/server/security/security';
 
-export async function POST({ request, url }) {
+export async function POST({ request, cookies, url }) {
 
     const data = await request.json();
     
     // Use secure cookie-based CSRF token validation
-    const { userAgent, ip, cloudflareIPGeo } = validateAPIRequest(request, cookies, data);
+    const { userAgent, ip, cloudflareIPGeo } = validateAPIRequest(request, cookies, data, { json: true });
 
     const icsContent = createICSFile(
         'Asia/Singapore',
