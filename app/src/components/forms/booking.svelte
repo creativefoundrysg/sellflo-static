@@ -214,6 +214,7 @@
     <Completion
         disabled={false}
         bind:tab={tab}
+        {_csrf}
         {phone}
         {phoneCountryCode}
         {name}

@@ -7,6 +7,7 @@
         email,
         website,
         phone,
+        _csrf,
         time,
         timeInAMPM = () => {},
         phoneCountryCode,
@@ -37,6 +38,7 @@
                 website,
                 phone,
                 phoneCountryCode,
+                _csrf,
                 time: selectedTimeSlot,
                 date: selectedFormattedDate,
             }, {
@@ -150,7 +152,7 @@
             <button type="button"
                     onclick={download}
                     disabled={disabled}
-                    class="w-full rounded-md {defaultClasses} px-3 py-2 text-sm font-semibold text-white hover:bg-rose-500 disabled:opacity-50 disabled:cursor-not-allowed flex flex-row items-center justify-center gap-2">
+                    class="w-full rounded-md {defaultClasses} px-3 py-2 text-sm font-semibold text-white hover:bg-blue-500 disabled:opacity-50 disabled:cursor-not-allowed flex flex-row items-center justify-center gap-2">
                     <svg class="size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M12 15V3"/>
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>

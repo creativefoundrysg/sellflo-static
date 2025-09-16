@@ -207,7 +207,7 @@
         <div class="mt-4">
             <label for="phone" class="font-bold block text-left text-sm text-gray-600 w-full">Please enter your phone number to confirm:</label>
             <div class="flex flex-row gap-2 mt-1">
-                <select bind:value={phoneCountryCode} id="country-code" name="country-code" class="mt-0.5 block w-1/3 rounded-md border-gray-300 focus:border-rose-500 focus:ring-rose-500 sm:text-sm px-3 py-2">
+                <select bind:value={phoneCountryCode} id="country-code" name="country-code" class="mt-0.5 block w-1/3 rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm px-3 py-2">
                     {#each countryCodes as { code, label }}
                         <option value={code} label={`+${code}`}>{label}</option>
                     {/each}
@@ -220,7 +220,7 @@
                     type="tel" 
                     name="phone" 
                     placeholder="Phone number"
-                    class="mt-0.5 placeholder:text-gray-400 block w-full rounded-md border-gray-300 focus:border-rose-500 focus:ring-rose-500 sm:text-sm px-3 py-2 {errors.phone && touched.phone ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : ''}"
+                    class="mt-0.5 placeholder:text-gray-400 block w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm px-3 py-2 {errors.phone && touched.phone ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : ''}"
                     aria-describedby={errors.phone && touched.phone ? "phone-error" : undefined}
                 />
             </div>
@@ -233,7 +233,7 @@
             <button type="button"
                     onclick={submitForm}
                     disabled={disabled || submitting || !isFormValid}
-                    class="w-full rounded-md {defaultClasses} px-3 py-2 text-sm font-semibold text-white hover:bg-rose-500 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 transition-opacity">
+                    class="w-full rounded-md {defaultClasses} px-3 py-2 text-sm font-semibold text-white hover:bg-blue-500 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 transition-opacity">
                     {#if submitting}
                         <svg class="animate-spin size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 12a9 9 0 1 1-6.219-8.56"/>

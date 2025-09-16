@@ -191,7 +191,7 @@
                 type="text" 
                 name="name" 
                 placeholder="Eg. John Doe"
-                class="mt-0.5 placeholder:text-gray-400 block w-full rounded-md border-gray-300 focus:border-rose-500 focus:ring-rose-500 sm:text-sm px-3 py-2 {errors.name && touched.name ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : ''}"
+                class="mt-0.5 placeholder:text-gray-400 block w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm px-3 py-2 {errors.name && touched.name ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : ''}"
                 aria-describedby={errors.name && touched.name ? "name-error" : undefined}
             />
             {#if errors.name && touched.name}
@@ -210,7 +210,7 @@
                 type="email" 
                 name="email" 
                 placeholder="you@example.com"
-                class="mt-0.5 placeholder:text-gray-400 block w-full rounded-md border-gray-300 focus:border-rose-500 focus:ring-rose-500 sm:text-sm px-3 py-2 {errors.email && touched.email ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : ''}"
+                class="mt-0.5 placeholder:text-gray-400 block w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm px-3 py-2 {errors.email && touched.email ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : ''}"
                 aria-describedby={errors.email && touched.email ? "email-error" : undefined}
             />
             {#if errors.email && touched.email}
@@ -231,7 +231,7 @@
                     type="text" 
                     name="website" 
                     placeholder="www.example.com"
-                    class="-ml-px placeholder:text-gray-400 block w-full rounded-r-md border-y-gray-300 border-r-gray-300 border-l-transparent focus:border-rose-500 focus:ring-rose-500 sm:text-sm px-3 py-2 {errors.website && touched.website ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : ''}"
+                    class="-ml-px placeholder:text-gray-400 block w-full rounded-r-md border-y-gray-300 border-r-gray-300 border-l-transparent focus:border-blue-500 focus:ring-blue-500 sm:text-sm px-3 py-2 {errors.website && touched.website ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : ''}"
                     aria-describedby={errors.website && touched.website ? "website-error" : undefined}
                 />
             </div>
@@ -246,7 +246,7 @@
                 type="button"
                 onclick={handleSubmit}
                 disabled={!isFormValid}
-                class="w-full rounded-md {defaultClasses} px-3 py-2 text-sm font-semibold text-white hover:bg-rose-500 disabled:opacity-50 disabled:cursor-not-allowed transition-opacity">
+                class="w-full rounded-md {defaultClasses} px-3 py-2 text-sm font-semibold text-white hover:bg-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-opacity">
                 Proceed &rarr;
             </button>
         </div>

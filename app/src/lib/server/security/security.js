@@ -89,13 +89,32 @@ export function validateRequest(request, options = {}) {
 }
 
 /**
- * Validates CSRF token
+ * Validates CSRF token from form submission against cookie
+ * @param {Object} cookies - SvelteKit cookies object
+ * @param {FormData|Object} data - FormData or JSON data containing _csrf field
+ * @throws {Response} Throws 403 JSON response if validation fails
  */
-export function validateCSRF(cookies, data) {
-    console.log("Form data received:", Object.fromEntries(data.entries()));
+export function validateFormCSRF(cookies, data) {
+    // console.log("Form data received:", Object.fromEntries(data.entries()));
     
     // Use .get() method for FormData objects
     const csrfToken = data.get('_csrf');
+    const cookieToken = cookies.get('csrfToken');
+    
+    if (!csrfToken || csrfToken !== cookieToken) {
+        console.warn('CSRF token validation failed');
+        throw json({ error: 'CSRF token mismatch' }, { status: 403 });
+    }
+}
+
+/** Validates CSRF token from JSON submission against cookie
+ * @param {Object} cookies - SvelteKit cookies object
+ * @param {Object} data - JSON data containing _csrf field
+ * @throws {Response} Throws 403 JSON response if validation fails
+ */
+export function validateJSONCSRF(cookies, data) {
+    // Use direct property access for JSON objects
+    const csrfToken = data._csrf;
     const cookieToken = cookies.get('csrfToken');
     
     if (!csrfToken || csrfToken !== cookieToken) {
@@ -109,7 +128,11 @@ export function validateCSRF(cookies, data) {
  */
 export function validateAPIRequest(request, cookies, data, options = {}) {
     const context = validateRequest(request, options);
-    validateCSRF(cookies, data);
+    if (options.json && options.json === true) {
+        validateJSONCSRF(cookies, data);
+    } else {
+        validateFormCSRF(cookies, data);
+    }
     return context;
 }
 

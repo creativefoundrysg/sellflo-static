@@ -44,7 +44,7 @@ export async function POST({ request, cookies, url }) {
     const data = await request.json();
     
     // Use secure cookie-based CSRF token validation
-    const { userAgent, ip, cloudflareIPGeo } = validateAPIRequest(request, cookies, data);
+    const { userAgent, ip, cloudflareIPGeo } = validateAPIRequest(request, cookies, data, { json: true });
 
     // // Send an email:
     var client = new postmark.ServerClient(POSTMARK_SERVER_API_KEY)
