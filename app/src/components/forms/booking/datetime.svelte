@@ -209,7 +209,7 @@
 {/if}
 
 <!-- Footer Action Button -->
-<div class="mt-8">
+<div class="mt-4">
     <button type="button"
             onclick={navigateTab}
             disabled={disabled}

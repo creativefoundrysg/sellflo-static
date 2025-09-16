@@ -41,9 +41,9 @@
             <!-- End Col -->
             <div class="col-span-6 md:col-span-2">
                 <div class="mt-4">
-                    <h2 class="text-2xl font-bold mb-4 font-display text-center">Complimentary GTM Session</h2>
+                    <h2 class="text-2xl font-bold mb-4 font-display text-center">Book a demo</h2>
                     <p class="text-neutral-500 mb-6">
-                        Take the first step. Book your <span class="text-neutral-700 font-bold">free 30 minute</span> discovery session to make the most of your GTM journey.
+                        Book your <span class="text-neutral-700 font-bold">free 30 minute</span> discovery session to make the most of your GTM journey.
                         First come first served basis. <span class="underline">Limited slots available.</span>
                     </p>
                     <BookingForm _csrf={data.csrfToken}/>
