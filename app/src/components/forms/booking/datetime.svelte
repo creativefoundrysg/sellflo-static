@@ -13,11 +13,7 @@
         CTALabel = "Next",
         defaultCSS = "",
         defaultClasses,
-        disabledClasses,
-         // Add availability props
-        availableDays = [1, 2, 3, 4, 5], // Monday=1, Tuesday=2, ... Sunday=0
-        availableTimes = ["15:00", "18:00"],
-        unavailableDates = [] // Specific dates to block: ["2025-09-20", "2025-09-25"]        
+        disabledClasses        
     } = $props()
 
     /* ----------  HELPERS ---------- */
@@ -25,23 +21,6 @@
         return a?.getFullYear() === b?.getFullYear()
             && a?.getMonth()   === b?.getMonth()
             && a?.getDate()    === b?.getDate();
-    }
-
-    function isDateAvailable(date) {
-        const dayOfWeek = date.getDay(); // 0=Sunday, 1=Monday, etc.
-        const dateString = date.toISOString().slice(0, 10);
-        
-        // Check if day of week is available
-        if (!availableDays.includes(dayOfWeek)) {
-            return false;
-        }
-        
-        // Check if specific date is blocked
-        if (unavailableDates.includes(dateString)) {
-            return false;
-        }
-        
-        return true;
     }
 
     /* ----------  DERIVED VALUES ---------- */
@@ -87,7 +66,7 @@
             date: d,
             inMonth,
             isToday: sameDay(d, today),
-            disabled: d < tomorrow || !isDateAvailable(d) // Add availability check
+            disabled: d < tomorrow  // Changed from `d < today` to `d < tomorrow`
         };
     }
 
@@ -203,9 +182,8 @@
         <div class="max-w-md mt-0.5">
             <select bind:value={selectedTimeSlot} id="time-select" name="time" class="mt-1 block w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm">
                 <option value="">Select a time</option>
-                {#each availableTimes as time}
-                    <option value={time}>{timeInAMPM(time)} Singapore Time</option>
-                {/each}
+                <option value="15:00">03:00 PM Singapore Time</option>
+                <option value="18:00">06:00 PM Singapore Time</option>
             </select>
         </div>
     </div>
