@@ -1,5 +1,6 @@
 <script>
     import { trackEvent } from "$lib/client/analytics/tracking.js";
+
     let {
         tab = $bindable("day"),
         selectedTimeSlot = $bindable(""),
@@ -13,7 +14,11 @@
         CTALabel = "Next",
         defaultCSS = "",
         defaultClasses,
-        disabledClasses        
+        disabledClasses,
+
+        // NEW: availability controls
+        availableDaysOfWeek = $bindable([1,2,3,4,5]),   // allow Mon–Fri by default
+        availableTimeSlots = $bindable(["15:00","18:00"])
     } = $props()
 
     /* ----------  HELPERS ---------- */
@@ -30,12 +35,13 @@
     // Calendar matrix (length = 35 or 42)
     const days = $derived(createDays(viewDate));
 
-    let disabled = $derived(tab === "time" && !selectedTimeSlot);
+    // Disable the CTA on Time tab if no time chosen or no slots available for policy
+    let disabled = $derived(tab === "time" && (!selectedTimeSlot || availableTimeSlots.length === 0));
 
     function createDays(ref) {
         const y = ref.getFullYear(), m = ref.getMonth();
         const first   = new Date(y, m, 1);
-        const offset  = (first.getDay() + 6) % 7;            // Monday-based index
+        const offset  = (first.getDay() + 6) % 7;            // Monday-based index for grid alignment
         const daysInM = new Date(y, m + 1, 0).getDate();
         const daysInP = new Date(y, m,     0).getDate();
         const out = [];
@@ -61,12 +67,19 @@
     function makeDay(d, inMonth) {
         const tomorrow = new Date(today);
         tomorrow.setDate(today.getDate() + 1);
-        
+
+        // NEW: weekend/weekday (or any custom) blackout via availableDaysOfWeek
+        const weekday = d.getDay(); // 0=Sun..6=Sat
+        const allowedByWeek = availableDaysOfWeek.includes(weekday);
+
+        const isDisabledBase = d < tomorrow;
+        const disabled = isDisabledBase || !allowedByWeek;
+
         return {
             date: d,
             inMonth,
             isToday: sameDay(d, today),
-            disabled: d < tomorrow  // Changed from `d < today` to `d < tomorrow`
+            disabled
         };
     }
 
@@ -90,6 +103,9 @@
         if (day.disabled) return;
         selected = day.date;
 
+        // When the user picks a day, clear any previous time that may no longer apply
+        selectedTimeSlot = "";
+
         try {
             trackEvent({
                 category: 'GTM Funnel: Intent',
@@ -102,6 +118,7 @@
         }
     }
 </script>
+
 <!-- Main Component Container -->
 <div class="max-w-md select-none">
     <!-- Header: Month Navigation -->
@@ -140,8 +157,7 @@
 
 <!-- Days Grid -->
 <div class="isolate mt-2 grid grid-cols-7 gap-px rounded-lg bg-gray-200 text-sm shadow-sm ring-1 ring-gray-200">
-    <!-- individual day buttons -->
-    {#each days as day, i}
+    {#each days as day}
         {#if sameDay(day.date, selected)}
             <!-- selected state -->
             <button type="button"
@@ -175,17 +191,20 @@
     value={selected ? selected.toISOString().slice(0,10) : ''}/>
 
 {#if tab === "time"}
-    <!-- Placeholder for time selection -->
+    <!-- Time selection -->
     <div class="text-center text-gray-500 mt-4">
         <label for="time" class="block text-left text-sm text-gray-600 font-bold w-full">Choose a time:</label>
-        <!-- Time selection logic goes here -->
         <div class="max-w-md mt-0.5">
             <select bind:value={selectedTimeSlot} id="time-select" name="time" class="mt-1 block w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm">
                 <option value="">Select a time</option>
-                <option value="15:00">03:00 PM Singapore Time</option>
-                <option value="18:00">06:00 PM Singapore Time</option>
+                {#each availableTimeSlots as t}
+                    <option value={t}>{t} Singapore Time</option>
+                {/each}
             </select>
         </div>
+        {#if availableTimeSlots.length === 0}
+            <p class="mt-2 text-xs text-red-500">No time slots available.</p>
+        {/if}
     </div>
 {/if}
 

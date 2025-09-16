@@ -5,9 +5,10 @@
     import Completion from './booking/completion.svelte'
     import { trackEvent } from "$lib/client/analytics/tracking.js";
     import { onMount } from 'svelte';
+
     /* ----------  CONFIG & STATE ---------- */
     const today = new Date();              // local "now"
-    today.setHours(0, 0, 0, 0);           // normalise
+    today.setHours(0, 0, 0, 0);            // normalise
     const maxDate = new Date(today);
     maxDate.setFullYear(maxDate.getFullYear() + 1);
 
@@ -16,8 +17,7 @@
     tomorrow.setDate(today.getDate() + 1);
     let selected = $state(new Date(tomorrow));
 
-    // FIX: Create a new Date object adjusted for the timezone offset.
-    // This prevents toISOString() from rolling back to the previous day in timezones ahead of UTC.
+    // Prevent ISO rollback across TZ boundaries (ahead of UTC)
     let selectedFormattedDate = $derived(selected ? new Date(selected.getTime() - (selected.getTimezoneOffset() * 60000)).toISOString().slice(0, 10) : "");
 
     /* ----------  BUTTON ---------- */
@@ -27,8 +27,8 @@
         _csrf
      } = $props();
     
-    let disabled = $state(false); // Disable the button if needed
-    
+    let disabled = $state(false); // Enable/disable CTA if you need at the outer level
+
     /* ----------  FORM ---------- */
     let name = $state("");
     let email = $state("");
@@ -37,13 +37,26 @@
     let website = $state("");
     let selectedTimeSlot = $state("");
 
+    /* ----------  AVAILABILITY (NEW) ---------- */
+    // Block weekends by default (Mon–Fri allowed)
+    // JS getDay(): 0=Sun,1=Mon,2=Tue,3=Wed,4=Thu,5=Fri,6=Sat
+    let availableDaysOfWeek = $state([1,2,3,4,5]);
+
+    // Provide your time window here; leave empty array to block booking on the Time tab
+    let availableTimeSlots = $state(["15:00","18:00"]);
+
+    let unavailableDates = $state([                   // Exact blackout days (YYYY-MM-DD)
+        "2025-12-25",  // Christmas
+        "2025-01-01"   // New Year
+    ]);
+
     /* ----------  CSS ---------- */
     let defaultCSS = $state("")
     let defaultClasses = "cursor-pointer min-h-0 min-w-0 cta dark:shadow-none shadow-neutral-500 -mt-px relative bg-gradient-to-t from-blue-600 to-blue-700 text-white text-sm"
     let disabledClasses = "min-h-0 min-w-0 cta-disabled dark:shadow-none shadow-neutral-500 -mt-px relative bg-slate-400 dark:bg-slate-800 dark:text-slate-300 text-slate-100 text-xs"
 
     /* ----------  TABS ---------- */
-    let tab = $state("day"); // "day" or "time"createDays
+    let tab = $state("day"); // "day" | "time" | "form" | "confirm" | "done"
 
     $effect(() => {
         defaultCSS = `${disabled ? disabledClasses : defaultClasses} inline-flex items-center justify-center font-semibold`
@@ -70,12 +83,8 @@
         }
         
         const ampm = hour24 >= 12 ? 'PM' : 'AM';
-        
-        // console.log(`Converting ${selectedTimeSlot} → ${hour12}:${minuteStr} ${ampm}`); // Debug
-        
         return `${hour12}:${minuteStr} ${ampm}`;
     });
-
 
     let dateInWords = $derived(new Date(selectedFormattedDate).toLocaleDateString('en-US', {
         weekday: 'long',
@@ -87,9 +96,7 @@
     function handleSubmit(event) {
         event.preventDefault();
         if (selected) {
-            // Handle form submission - you can dispatch an event or call a callback
             console.log('Selected date:', selected.toISOString().slice(0, 10));
-            // Example: dispatch('dateSelected', { date: selected });
         }
     }
 
@@ -149,6 +156,7 @@
         }
     }
 </script>
+
 {#if tab === "day" || tab === "time"}
     <DateTime 
         bind:tab={tab}
@@ -165,6 +173,10 @@
         {defaultCSS}
         {defaultClasses}
         {disabledClasses}
+
+        bind:availableDaysOfWeek={availableDaysOfWeek}
+        bind:availableTimeSlots={availableTimeSlots}
+        bind:unavailableDates={unavailableDates}
     />
 {/if}
 
