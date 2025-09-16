@@ -154,7 +154,7 @@
                     </div>
                   </div>
                   <div class="py-6">
-                      <CTA label={"Book A Call"} url="/meet"/>
+                      <CTA label={"Book A Demo"} url="/meet"/>
                   </div>
               </div>
           </div>

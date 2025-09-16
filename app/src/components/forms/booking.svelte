@@ -22,7 +22,7 @@
 
     /* ----------  BUTTON ---------- */
     let { 
-        CTALabel = "Book A Call",
+        CTALabel = "Book A Demo",
         CTAAction = "Book Now",
         _csrf
      } = $props();

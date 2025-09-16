@@ -3,10 +3,8 @@ import { randomBytes } from 'node:crypto';
 import { PUBLIC_MODE } from '$env/static/public';
 
 const ALLOWED_ORIGINS = new Set([
-    'https://creativefoundry.ai',
-    'https://creativefoundry.sg', 
-    'https://www.creativefoundry.ai',
-    'https://www.creativefoundry.sg',
+    'https://sellflo.ai',
+    'https://www.sellflo.ai',
     'http://localhost:5173',
     'http://localhost:5174' // Add backup dev port
 ]);

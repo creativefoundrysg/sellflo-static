@@ -60,5 +60,5 @@
 </div>
 
 <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-    <CTA label={"Book A Call"} url="/meet"/>
+    <CTA label={"Book A Demo"} url="/meet"/>
 </div>
