@@ -36,6 +36,7 @@
     let phoneCountryCode = $state("1");
     let website = $state("");
     let selectedTimeSlot = $state("");
+    let sourceTimeZone = $state("ET"); // Eastern Time by default
 
     /* ----------  AVAILABILITY (NEW) ---------- */
     // Block weekends by default (Mon–Fri allowed)
@@ -43,7 +44,7 @@
     let availableDaysOfWeek = $state([1,2,3,4,5]);
 
     // Provide your time window here; leave empty array to block booking on the Time tab
-    let availableTimeSlots = $state(["15:00","18:00"]);
+    let availableTimeSlots = $state(["10:00", "11::00", "19:00"]);
 
     let unavailableDates = $state([                   // Exact blackout days (YYYY-MM-DD)
         "2025-12-25",  // Christmas
@@ -161,10 +162,14 @@
     <DateTime 
         bind:tab={tab}
         bind:selectedTimeSlot={selectedTimeSlot}
+        bind:availableDaysOfWeek={availableDaysOfWeek}
+        bind:availableTimeSlots={availableTimeSlots}
+        bind:unavailableDates={unavailableDates}
         {today}
         {maxDate}
         {viewDate}
         {selected}
+        {sourceTimeZone}
         {navigateTab}
         {timeInAMPM}
         {dateInWords}
@@ -173,10 +178,6 @@
         {defaultCSS}
         {defaultClasses}
         {disabledClasses}
-
-        bind:availableDaysOfWeek={availableDaysOfWeek}
-        bind:availableTimeSlots={availableTimeSlots}
-        bind:unavailableDates={unavailableDates}
     />
 {/if}
 
@@ -211,6 +212,7 @@
         {website}
         {selectedFormattedDate}
         {selectedTimeSlot}
+        {sourceTimeZone}
         {timeInAMPM}
         {navigateTab}
         {dateInWords}
@@ -234,6 +236,7 @@
         {website}
         {selectedFormattedDate}
         {selectedTimeSlot}
+        {sourceTimeZone}
         {timeInAMPM}
         {navigateTab}
         {dateInWords}

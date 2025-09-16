@@ -17,12 +17,12 @@ export async function POST({ request, cookies, url }) {
     const { userAgent, ip, cloudflareIPGeo } = validateAPIRequest(request, cookies, data, { json: true });
 
     const icsContent = createICSFile(
-        'Asia/Singapore',
+        'America/New_York',
         data.date,
         data.time,
         30, // or 60, as needed for duration in minutes
-        `Discovery Call with Creative Foundry <> ${data.name}`,
-        'Please join the discovery call at the schedule time. If you did not request this booking, please let us know.',
+        `SellFlo.ai Booking Demo <> ${data.name}`,
+        'Please join the call at the schedule time. If you did not request this booking, please let us know.',
         'Online Meeting',
         [
             { name: data.name, email: data.email },

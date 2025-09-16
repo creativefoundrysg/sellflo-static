@@ -64,9 +64,9 @@ export async function POST({ request, cookies, url }) {
             "geoFromIP": cloudflareIPGeo,
             "date": data.date,
             "timeSlot": data.timeSlot,
-            "time": data.time,
+            "time": `${data.time} ${data.sourceTimeZone}`,
             "timestamp": getCurrentSGT('readable'),
-            "notifications_url": "https://creativefoundry.ai",
+            "notifications_url": "https://sellflo.ai",
         },
         "TemplateId": 41489299
     });
@@ -86,9 +86,9 @@ export async function POST({ request, cookies, url }) {
             "geoFromIP": cloudflareIPGeo,
             "date": data.date,
             "timeSlot": data.timeSlot,
-            "time": data.time,
+            "time": `${data.time} ${data.sourceTimeZone}`,
             "timestamp": getCurrentSGT('readable'),
-            "notifications_url": "https://creativefoundry.ai",
+            "notifications_url": "https://sellflo.ai",
         },
         "TemplateId": 41489289
     });

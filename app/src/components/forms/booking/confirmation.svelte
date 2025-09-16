@@ -17,6 +17,7 @@
         timeInAMPM = () => {},
         selectedTimeSlot,
         selectedFormattedDate,
+        sourceTimeZone,
         defaultClasses,
         disabledClasses
     } = $props();
@@ -114,6 +115,7 @@
             phoneCountryCode,
             date: selectedFormattedDate,
             time: timeInAMPM(),
+            sourceTimeZone,
             timeSlot: selectedTimeSlot
         }).then(response => {
             submitting = false;
@@ -188,7 +190,7 @@
             </p>
             <p class="mt-2 text-sm text-gray-600">
                 <span class="font-bold">Time:</span> 
-                {timeInAMPM()}
+                {timeInAMPM()} {sourceTimeZone}
             </p>
             <p class="mt-2 text-sm text-gray-600">
                 <span class="font-bold">Name:</span> 

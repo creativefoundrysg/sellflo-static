@@ -18,7 +18,7 @@
 
         // NEW: availability controls
         availableDaysOfWeek = $bindable([1,2,3,4,5]),   // allow Mon–Fri by default
-        availableTimeSlots = $bindable(["15:00","18:00"])
+        availableTimeSlots = $bindable([])
     } = $props()
 
     /* ----------  HELPERS ---------- */
@@ -198,7 +198,7 @@
             <select bind:value={selectedTimeSlot} id="time-select" name="time" class="mt-1 block w-full rounded-md border-gray-300 focus:border-blue-500 focus:ring-blue-500 sm:text-sm">
                 <option value="">Select a time</option>
                 {#each availableTimeSlots as t}
-                    <option value={t}>{t} Singapore Time</option>
+                    <option value={t}>{t} Eastern Time</option>
                 {/each}
             </select>
         </div>
