@@ -1,5 +1,5 @@
 
-<section class="py-8 bg-white border-t border-b border-slate-200">
+<section class="py-8">
 	<div class="mx-auto px-4 sm:px-6 md:max-w-2xl md:px-4 lg:max-w-6xl lg:px-8">
 	  <div class="text-center mb-8">
 		<p class="text-lg font-bold text-slate-600 mb-4">Trusted by founders</p>

@@ -18,11 +18,11 @@
 </script>
 <header class="overflow-hidden bg-slate-100 lg:bg-transparent lg:px-5">
 	<div
-		class="mx-auto grid max-w-6xl grid-cols-1 grid-rows-[auto_1fr] gap-y-16 pt-16 md:pt-20 lg:grid-cols-12 lg:gap-y-20 lg:px-3 lg:pb-36 lg:pt-20 xl:py-32"
+		class="mx-auto grid max-w-6xl grid-cols-1 grid-rows-[auto_1fr] gap-y-16 pt-16 lg:grid-cols-12 lg:gap-y-20 lg:px-3 lg:pb-36 lg:pt-20 xl:pt-12 xl:pb-32"
 	>
 		<div class="relative flex items-end lg:col-span-5 lg:row-span-2">
 			<div
-				class="rounded-br-6xl absolute -bottom-12 -top-20 left-0 right-1/2 z-10 bg-blue-600 text-white/10 md:bottom-8 lg:-inset-y-32 lg:left-[-100vw] lg:right-full lg:-mr-40"
+				class="rounded-br-[5rem] absolute -bottom-12 -top-20 left-0 right-1/2 z-10 bg-blue-600 text-white/10 md:bottom-8 lg:-inset-y-32 lg:left-[-100vw] lg:right-full lg:-mr-40"
 			>
 				<svg aria-hidden="true" class="absolute inset-0 h-full w-full">
 					<defs>
