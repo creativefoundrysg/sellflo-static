@@ -46,6 +46,7 @@
                     class="relative z-10 flex w-64 rounded-xl border-4 border-slate-600 bg-slate-600 shadow-xl md:w-80 lg:w-auto"
                 >
 					<a
+						aria-label="Preview hero image"
 						href="#preview"
 						onclick={z('GTM Funnel:Awareness', 'Preview Document', 'Click', 10)} >
 						<img
