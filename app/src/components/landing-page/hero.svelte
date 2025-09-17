@@ -45,16 +45,20 @@
                 <div
                     class="relative z-10 flex w-64 rounded-xl border-4 border-slate-600 bg-slate-600 shadow-xl md:w-80 lg:w-auto"
                 >
-                    <img
-                        alt=""
-                        width="960"
-                        height="1284"
-                        decoding="async"
-                        data-nimg="1"
-                        class="w-full rounded-md"
-                        style="color: transparent"
-                        src="/pivot.webp"
-                    />
+					<a
+						href="#preview"
+						onclick={z('GTM Funnel:Awareness', 'Preview Document', 'Click', 10)} >
+						<img
+							alt=""
+							width="960"
+							height="1284"
+							decoding="async"
+							data-nimg="1"
+							class="w-full rounded-md"
+							style="color: transparent"
+							src="/pivot.webp"
+						/>
+					</a>
                 </div>
             
                 <div class="flex w-64 justify-end mt-2 md:w-80 lg:w-auto">
@@ -117,8 +121,7 @@
 			</figure>
 		</div>
 		<div class="bg-white pt-16 lg:col-span-7 lg:bg-transparent lg:pl-16 lg:pt-0 xl:pl-20">
-			<a href="#preview"
-				onclick={z('GTM Funnel:Awareness', 'Preview Document', 'Click', 10)} 
+			<a href="/"
 				class="block mx-auto -mt-10 mb-6 px-4 sm:px-6 md:max-w-2xl md:px-4 lg:px-0">
 				<img class="h-14 w-auto" src="/logo.svg" alt="SellFlo" />
 			</a>
