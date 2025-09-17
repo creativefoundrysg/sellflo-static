@@ -75,15 +75,15 @@
 				<h2
 					class="font-display text-5xl font-extrabold tracking-tight text-white sm:w-3/4 sm:text-6xl md:w-2/3 lg:w-auto"
 				>
-					Get a free sample report
+					Get early access
 				</h2>
 				<p class="mt-4 text-lg tracking-tight text-blue-200">
-					Enter your email address and we'll send you a free sample report of a startup.
+					Join the Founders List — early access to the AI Agent + priority features.
 				</p>
 			</div>
 			<div class="lg:pl-16">
 				<h3 class="text-base font-medium tracking-tight text-white">
-					Get a free sample straight to your inbox
+					Get early access
 					<span aria-hidden="true">→</span>
 				</h3>
 				<div class="mt-4 sm:relative sm:flex sm:items-center sm:py-0.5 sm:pr-2.5">
@@ -108,7 +108,7 @@
 							onclick={z('GTM Funnel:Consideration', 'Email Subscribe', 'Submit', 100)}
 							type="submit"
 							color="white"
-							variant="solid">Get free sample</button
+							variant="solid">Get access</button
 						>
 					</EmailForm>
 				</div>

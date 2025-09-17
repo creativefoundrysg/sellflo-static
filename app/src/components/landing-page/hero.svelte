@@ -124,11 +124,11 @@
 			</a>
 			<div class="mx-auto px-4 sm:px-6 md:max-w-2xl md:px-4 lg:px-0">
 				<h1 class="font-display text-3xl font-extrabold text-slate-900 sm:text-6xl">
-					Idea to first 100 customers with AI
+					AI GTM Automation: Strategy, Outreach & Lead Generation
 				</h1>
 				<p class="mt-4 text-3xl text-slate-600">
-					Our AI Co-Pilot researches your market, validates demand, and delivers a go-to-market plan
-					in hours — not months.
+					Our AI agent handles your go-to-market end-to-end - from research to qualified leads, on autopilot.
+					<span class="block">Even while you're asleep.</span>
 				</p>
 				<div class="mt-8 flex gap-4 justify-center sm:justify-start">
 					<a
@@ -138,7 +138,7 @@
 						variant="solid"
 						href="/start"
 					>
-						Download Custom GTM Plan
+						Get Started
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 24 24"
