@@ -78,7 +78,7 @@
 					Get early access
 				</h2>
 				<p class="mt-4 text-lg tracking-tight text-blue-200">
-					Join the Founders List — early access to the AI Agent + priority features.
+					Join the waitlist — early access to the AI Agent + priority features.
 				</p>
 			</div>
 			<div class="lg:pl-16">
