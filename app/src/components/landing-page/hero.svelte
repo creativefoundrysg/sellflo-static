@@ -57,7 +57,7 @@
 							data-nimg="1"
 							class="w-full rounded-md"
 							style="color: transparent"
-							src="/pivot.webp"
+							src="/dashboard.webp"
 						/>
 					</a>
                 </div>
@@ -132,7 +132,6 @@
 				</h1>
 				<p class="mt-4 text-3xl text-slate-600">
 					Our AI crafts your GTM strategy, optimizes the copy based on analytics, and then launches the outreach to fill it with your first leads.
-					<span class="block">Even while you're asleep.</span>
 				</p>
 				<div class="mt-8 flex gap-4 justify-center sm:justify-start">
 					<a
