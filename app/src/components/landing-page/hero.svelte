@@ -128,10 +128,10 @@
 			</a>
 			<div class="mx-auto px-4 sm:px-6 md:max-w-2xl md:px-4 lg:px-0">
 				<h1 class="font-display text-3xl font-extrabold text-slate-900 sm:text-6xl">
-					AI GTM Automation: Strategy, Outreach & Lead Generation
+					Landing pages that generate your first 100 leads.
 				</h1>
 				<p class="mt-4 text-3xl text-slate-600">
-					Our AI agent handles your go-to-market end-to-end - from research to qualified leads, on autopilot.
+					Our AI crafts your GTM strategy, optimizes the copy based on analytics, and then launches the outreach to fill it with your first leads.
 					<span class="block">Even while you're asleep.</span>
 				</p>
 				<div class="mt-8 flex gap-4 justify-center sm:justify-start">
